@@ -18,12 +18,10 @@ const Info = () => {
   }, [name]);
   */
   useEffect( () => {
-      console.log("effect");
-      console.log('name>>', name);
-      return () => {
-          console.log('cleanup');
-          console.log('name::', name);
-      }
+    console.log("effect - name ::[" + name+ "]");
+    return () => {
+      console.log('name::', name);
+    }
   } );
 
   const onChangeName = (e) => {
