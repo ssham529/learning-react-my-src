@@ -98,9 +98,3 @@ app.use(serverRender);
 app.listen(5000, () => {
   console.log("HSS Running on http://localhost:5000");
 });
-
-const html = ReactDOMServer.renderToString(
-  <div>Hellog Server Side Rendering?</div>
-);
-
-console.log(html);
