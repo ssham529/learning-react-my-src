@@ -38,6 +38,7 @@ export const getPostById = async (ctx, next) => {
 
 export const checkOwnPost = (ctx, next) => {
   const { user, post } = ctx.state;
+  // 게시글의 소유자의 _id 와 로그인 사용자의 _id 를 비교
   if (post.user._id.toString() !== user._id) {
     ctx.status = 403;
     return;
